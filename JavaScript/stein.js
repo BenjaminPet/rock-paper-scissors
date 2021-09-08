@@ -140,7 +140,7 @@ function starting() {
             // if you havent clicked enny button then 
             if (d == true) {
                 you = "../Image/artworks-000001576487-iijyhk-t500x500.jpg";
-                bot = 3
+                bot = 3;
                 win = "lose";
                 scoreA = scoreA - 1;
                 scoreB = scoreB - 1;
@@ -159,17 +159,17 @@ function result(you, win) {
     console.log("score u: " + scoreA)
     console.log("score bot: " + scoreB)
     console.log("round: " + round)
-
+    
     // if you are too fast you will lose automatically
     if (timeLeft >= 2) {
         if (you = "../Image/rock_1faa8.png") {
-            bot = ;
+            bot = 1;
             console.log("cheater")
         } else if (you = "../Image/page-facing-up-emoji-by-twitter.png") {
-            boot = "../Image/unnamed.png";
+            bot = 2;
             console.log("cheater")
         } else if (you = "../Image/unnamed.png") {
-            boot = "../Image/rock_1faa8.png";
+            bot = 0;
             console.log("cheater")
         }
     }
