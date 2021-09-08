@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../CSS/stein css.css">
+    <script src="../JavaScript/stein.js"></script>
+</head>
+<body>
+<h1>Velg stein saks eller papir</h1><br>
+
+<h3>Du må først trykke start også må du velge stein saks eller papir innenfor de tre sekundene. Etter det vil du kunne se hvem som vant</h3>
+
+<button onclick="starting()" id="startbutton">START A GAME</button>
+
+<!--3 second cont down-->
+<div id="clock">
+	<h2 id="seconds">3</h2>
+</div><br>
+
+    <!--buttons-->
+    <div id="thebuttons">
+    <button id="rock1" onclick="rock()"><img src="../Image/rock_1faa8.png" alt=""></button>
+    <button id="paper1" onclick="paper()"><img src="../Image/page-facing-up-emoji-by-twitter.png" alt=""></button>
+    <button id="sisor1" onclick="sisor()"><img src="../Image/unnamed.png" alt=""></button><br><br>
+    </div>
+    <div id="ro2">
+        <img src="../Image/flame2.png" style="width: 300px; height: 300px;">
+        <h2 id="ro">ROUND: </h2>
+    </div>
+
+    <!--end round-->
+    <button id="end" onclick="window.location.reload();">End Round</button><br>
+
+    <!--retry-->
+    <button class="button" id="Retry" onclick="Retry()">Retry</button><br>
+
+    <div id="list">
+        <h3 id="h3"></h3>
+        <table id="mytable">
+            <tr>
+                <th>Round</th>
+                <th>Robot</th>
+                <th>User</th> 
+                <th>Resolte</th>
+            </tr>
+        </table>
+        <div class="redbox">
+        <img src="../Image/Fist.svg" class="anime">
+        <img src="../Image/Fist.svg" class="anime1">
+        </div>
+    </div>
+</div>
+<button class="back" onclick="window.location.href = 'stein start.html';">BACK</button>
+</body>
+</html>
