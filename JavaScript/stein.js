@@ -86,36 +86,7 @@ function Retry() {
     round = round + 1
 
 }
-// shows whether you win or lose
-function poeng() {
-    if (round == 3 && scoreA > scoreB) {
-        document.getElementById("h3").innerHTML = "you f**king won";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    } else if (round == 3 && scoreA < scoreB) {
-        document.getElementById("h3").innerHTML = "you lost ... LOOOOSER!";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    } else if (round == 3 && scoreA == scoreB) {
-        document.getElementById("h3").innerHTML = "?";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    }
-    if (round == 2 && scoreA == 2) {
-        document.getElementById("h3").innerHTML = "you f**king won";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    } else if (round == 2 && scoreB == 2) {
-        document.getElementById("h3").innerHTML = "you lost ... LOOOOSER!";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    }
-}
+
 //start button
 function starting() {
     document.getElementById("startbutton").style.visibility = "hidden";
@@ -164,23 +135,10 @@ function result(you, win) {
     document.getElementById("ro2").style.visibility = "visible";
     document.getElementById("Retry").style.visibility = "visible";
     document.getElementById("thebuttons").style.visibility = "hidden";
+
     console.log("score u: " + scoreA)
     console.log("score bot: " + scoreB)
     console.log("round: " + round)
-    
-    // if you are too fast you will lose automatically
-    if (timeLeft >= 2) {
-        if (you = "../Image/rock_1faa8.png") {
-            bot = 1;
-            console.log("cheater")
-        } else if (you = "../Image/page-facing-up-emoji-by-twitter.png") {
-            bot = 2;
-            console.log("cheater")
-        } else if (you = "../Image/unnamed.png") {
-            bot = 0;
-            console.log("cheater")
-        }
-    }
     
     // shows whether you win or lose
     if (round == 3 && scoreA > scoreB) {
@@ -209,6 +167,21 @@ function result(you, win) {
         // game over
         document.getElementById("end").style.visibility = "visible";
         document.getElementById("Retry").style.visibility = "hidden";
+    }
+
+        
+    // if you are too fast you will lose automatically
+    if (timeLeft > 1) {
+        if (you == "../Image/rock_1faa8.png") {
+            bot = 1;
+            console.log("cheater bot paper")
+        } else if (you == "../Image/page-facing-up-emoji-by-twitter.png") {
+            bot = 2;
+            console.log("cheater bot sisor")
+        } else if (you == "../Image/unnamed.png") {
+            bot = 0;
+            console.log("cheater bot rock")
+        }
     }
 
     // takes the number in bot and asigne ether rock, paper or siccors
