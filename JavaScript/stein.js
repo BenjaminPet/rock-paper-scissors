@@ -2,8 +2,6 @@ var bot = Math.floor(Math.random() * 3);
 // if d is keeps being true then you have not choosen enything
 var d = true;
 
-var myMusic = new sound("../470083__sheyvan__music-orchestral-victory-fanfare.wav");
-
 var num = 1;
 var scoreA = 0;
 var scoreB = 0;
@@ -228,5 +226,6 @@ function result(you, win) {
         document.getElementById("end").style.visibility = "visible";
         document.getElementById("Retry").style.visibility = "hidden";
     }
+    var myMusic = new Audio("../470083__sheyvan__music-orchestral-victory-fanfare.wav");
     myMusic.play();
 }
