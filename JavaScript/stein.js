@@ -156,6 +156,14 @@ setTimeout(countdown, 1000);
 };
 // result is to add the information to a table and enter "answer"
 function result(you, win) {
+    //Runder
+    document.getElementById("ro").innerHTML = "ROUND: " + round
+
+    document.getElementById("clock").style.visibility = "hidden";   
+    document.getElementById("list").style.visibility = "visible";
+    document.getElementById("ro2").style.visibility = "visible";
+    document.getElementById("Retry").style.visibility = "visible";
+    document.getElementById("thebuttons").style.visibility = "hidden";
     console.log("score u: " + scoreA)
     console.log("score bot: " + scoreB)
     console.log("round: " + round)
@@ -173,6 +181,35 @@ function result(you, win) {
             console.log("cheater")
         }
     }
+    
+    // shows whether you win or lose
+    if (round == 3 && scoreA > scoreB) {
+        document.getElementById("h3").innerHTML = "you f**king won";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    } else if (round == 3 && scoreA < scoreB) {
+        document.getElementById("h3").innerHTML = "you lost ... LOOOOSER!";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    } else if (round == 3 && scoreA == scoreB) {
+        document.getElementById("h3").innerHTML = "?";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    }
+    if (round == 2 && scoreA == 2) {
+        document.getElementById("h3").innerHTML = "you f**king won";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    } else if (round == 2 && scoreB == 2) {
+        document.getElementById("h3").innerHTML = "you lost ... LOOOOSER!";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    }
 
     // takes the number in bot and asigne ether rock, paper or siccors
     if (bot == 0){
@@ -186,15 +223,6 @@ function result(you, win) {
     }
     d = false;
     
-    //Runder
-    document.getElementById("ro").innerHTML = "ROUND: " + round
-
-    document.getElementById("clock").style.visibility = "hidden";   
-    document.getElementById("list").style.visibility = "visible";
-    document.getElementById("ro2").style.visibility = "visible";
-    document.getElementById("Retry").style.visibility = "visible";
-    document.getElementById("thebuttons").style.visibility = "hidden";
-
     // Find a <table> element with id="myTable":
     let table = document.getElementById("mytable");
 
@@ -214,5 +242,4 @@ function result(you, win) {
     cell3.innerHTML = "<img src='../Image/" + win + ".png' alt='' class='img2'>";
     
     num = num + 1;
-    poeng();
 }
