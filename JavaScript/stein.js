@@ -57,19 +57,26 @@ function sisor() {
     bot = Math.floor(Math.random() * 3);
     var you = "../Image/unnamed.png"
 
-    // you = scissors bot = paper
-    if(bot == 1){
-        var win = "win";
-        scoreA = scoreA + 1;
-
-    // you = scissor bot = rock
-    } else if(bot == 0){
-        var win = "lose";
+    if (timeLeft > 1) {
+        bot = 0;
+        win = "lose"
         scoreB = scoreB + 1;
-
-    // you = scissor bot = scissor
+        console.log("cheater bot rock")
     } else {
-        var win = "draw";
+        // you = scissors bot = paper
+        if(bot == 1){
+            var win = "win";
+            scoreA = scoreA + 1;
+
+        // you = scissor bot = rock
+        } else if(bot == 0){
+            var win = "lose";
+            scoreB = scoreB + 1;
+
+        // you = scissor bot = scissor
+        } else {
+            var win = "draw";
+        }
     }
 
     result(you, win);
@@ -144,14 +151,17 @@ function result(you, win) {
         if (you == "../Image/rock_1faa8.png") {
             bot = 1;
             win = "lose"
+            scoreB = scoreB + 1;
             console.log("cheater bot paper")
         } else if (you == "../Image/page-facing-up-emoji-by-twitter.png") {
             bot = 2;
             win = "lose"
+            scoreB = scoreB + 1;
             console.log("cheater bot sisor")
         } else if (you == "../Image/unnamed.png") {
             bot = 0;
             win = "lose"
+            scoreB = scoreB + 1;
             console.log("cheater bot rock")
         }
     }
