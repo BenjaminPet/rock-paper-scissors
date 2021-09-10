@@ -117,9 +117,6 @@ function starting() {
                 scoreB = scoreB - 1;
                 result(you, win)
             }
-            if (timeLeft == 1) {
-                
-            }
 	}
 };
 
@@ -139,47 +136,22 @@ function result(you, win) {
     console.log("score u: " + scoreA)
     console.log("score bot: " + scoreB)
     console.log("round: " + round)
-    
-    // shows whether you win or lose
-    if (round == 3 && scoreA > scoreB) {
-        document.getElementById("h3").innerHTML = "you f**king won";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    } else if (round == 3 && scoreA < scoreB) {
-        document.getElementById("h3").innerHTML = "you lost ... LOOOOSER!";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    } else if (round == 3 && scoreA == scoreB) {
-        document.getElementById("h3").innerHTML = "?";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    }
-    if (round == 2 && scoreA == 2) {
-        document.getElementById("h3").innerHTML = "you f**king won";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    } else if (round == 2 && scoreB == 2) {
-        document.getElementById("h3").innerHTML = "you lost ... LOOOOSER!";
-        // game over
-        document.getElementById("end").style.visibility = "visible";
-        document.getElementById("Retry").style.visibility = "hidden";
-    }
+    console.log("time: " + timeLeft)
 
         
     // if you are too fast you will lose automatically
     if (timeLeft > 1) {
         if (you == "../Image/rock_1faa8.png") {
             bot = 1;
+            win = "lose"
             console.log("cheater bot paper")
         } else if (you == "../Image/page-facing-up-emoji-by-twitter.png") {
             bot = 2;
+            win = "lose"
             console.log("cheater bot sisor")
         } else if (you == "../Image/unnamed.png") {
             bot = 0;
+            win = "lose"
             console.log("cheater bot rock")
         }
     }
@@ -215,4 +187,33 @@ function result(you, win) {
     cell3.innerHTML = "<img src='../Image/" + win + ".png' alt='' class='img2'>";
     
     num = num + 1;
+
+    // shows whether you win or lose
+    if (round == 3 && scoreA > scoreB) {
+        document.getElementById("h3").innerHTML = "you f**king won";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    } else if (round == 3 && scoreA < scoreB) {
+        document.getElementById("h3").innerHTML = "you lost ... LOOOOSER!";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    } else if (round == 3 && scoreA == scoreB) {
+        document.getElementById("h3").innerHTML = "?";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    }
+    if (round == 2 && scoreA == 2) {
+        document.getElementById("h3").innerHTML = "you f**king won";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    } else if (round == 2 && scoreB == 2) {
+        document.getElementById("h3").innerHTML = "you lost ... LOOOOSER!";
+        // game over
+        document.getElementById("end").style.visibility = "visible";
+        document.getElementById("Retry").style.visibility = "hidden";
+    }
 }
