@@ -164,21 +164,6 @@ function result(you, win) {
     console.log("round: " + round)
     console.log("time: " + timeLeft)
 
-        
-    // if you are too fast you will lose automatically
-    if (timeLeft > 1) {
-        if (you == "../Image/rock_1faa8.png") {
-            bot = 1;
-            win = "lose"
-            scoreB = scoreB + 1;
-            console.log("cheater bot paper")
-        } else if (you == "../Image/page-facing-up-emoji-by-twitter.png") {
-            bot = 2;
-            win = "lose"
-            scoreB = scoreB + 1;
-            console.log("cheater bot sisor")
-        }
-    }
 
     // takes the number in bot and asigne ether rock, paper or siccors
     if (bot == 0){
