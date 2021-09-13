@@ -161,6 +161,7 @@ function result(you, win) {
             scoreB = scoreB + 1;
             console.log("cheater bot sisor")
         }
+    }
 
     // takes the number in bot and asigne ether rock, paper or siccors
     if (bot == 0){
