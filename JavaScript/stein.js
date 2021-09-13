@@ -14,19 +14,27 @@ function rock() {
     bot = Math.floor(Math.random() * 3);
     var you = "../Image/rock_1faa8.png"
 
-    // you = rock bot = sisor
-    if(bot == 2){
-        var win = "win";
-        scoreA = scoreA + 1;
-
-    // you = rock bot = paper
-    } else if(bot == 1){
-        var win = "lose";
+    if (timeLeft > 1) {
+        bot = 0;
+        win = "lose"
         scoreB = scoreB + 1;
+        console.log("cheater bot rock")
 
-    // you = rock bot = rock
-    } else {
-        var win = "draw";
+    } else if (timeLeft = 1){
+        // you = rock bot = sisor
+        if(bot == 2){
+            var win = "win";
+            scoreA = scoreA + 1;
+
+        // you = rock bot = paper
+        } else if(bot == 1){
+            var win = "lose";
+            scoreB = scoreB + 1;
+
+        // you = rock bot = rock
+        } else {
+            var win = "draw";
+        }
     }
     result(you, win);
     
@@ -35,19 +43,28 @@ function paper() {
     // random number between 0 and 2 
     bot = Math.floor(Math.random() * 3);
     var you = "../Image/page-facing-up-emoji-by-twitter.png"
-    // you = papir bot = rock
-    if(bot == 0){
-        var win = "win";
-        scoreA = scoreA + 1;
 
-    // you = papir bot = siccors
-    } else if(bot == 2){
-        var win = "lose";
+    if (timeLeft > 1) {
+        bot = 0;
+        win = "lose"
         scoreB = scoreB + 1;
+        console.log("cheater bot rock")
 
-    // you = papir bot = papir
-    } else {
-        var win = "draw";
+    } else if (timeLeft = 1){
+        // you = papir bot = rock
+        if(bot == 0){
+            var win = "win";
+            scoreA = scoreA + 1;
+
+        // you = papir bot = siccors
+        } else if(bot == 2){
+            var win = "lose";
+            scoreB = scoreB + 1;
+
+        // you = papir bot = papir
+        } else {
+            var win = "draw";
+        }
     }
     result(you, win);
     
