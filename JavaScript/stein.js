@@ -64,11 +64,11 @@ function sisor() {
         console.log("cheater bot rock")
     } else if (timeLeft = 1){
         // you = scissors bot = paper
+        console.log("not")
         if(bot == 1){
             var win = "win";
             scoreA = scoreA + 1;
-            console.log("not")
-
+            
         // you = scissor bot = rock
         } else if(bot == 0){
             var win = "lose";
