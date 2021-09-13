@@ -62,7 +62,7 @@ function sisor() {
         win = "lose"
         scoreB = scoreB + 1;
         console.log("cheater bot rock")
-    } else {
+    } else if (timeLeft = 1){
         // you = scissors bot = paper
         if(bot == 1){
             var win = "win";
