@@ -62,6 +62,7 @@ function sisor() {
         win = "lose"
         scoreB = scoreB + 1;
         console.log("cheater bot rock")
+
     } else if (timeLeft = 1){
         // you = scissors bot = paper
         console.log("not")
@@ -159,13 +160,7 @@ function result(you, win) {
             win = "lose"
             scoreB = scoreB + 1;
             console.log("cheater bot sisor")
-        } else if (you == "../Image/unnamed.png") {
-            bot = 0;
-            win = "lose"
-            scoreB = scoreB + 1;
-            console.log("cheater bot rock")
         }
-    }
 
     // takes the number in bot and asigne ether rock, paper or siccors
     if (bot == 0){
@@ -199,7 +194,7 @@ function result(you, win) {
     
     num = num + 1;
 
-    // shows whether you win or lose
+    // shows whether you win or lose 
     if (round == 3 && scoreA > scoreB) {
         document.getElementById("h3").innerHTML = "you f**king won";
         // game over
