@@ -15,7 +15,7 @@ function rock() {
     var you = "../Image/rock_1faa8.png"
 
     if (timeLeft > 1) {
-        bot = 0;
+        bot = 1;
         win = "lose"
         scoreB = scoreB + 1;
         console.log("cheater bot paper")
@@ -45,7 +45,7 @@ function paper() {
     var you = "../Image/page-facing-up-emoji-by-twitter.png"
 
     if (timeLeft > 1) {
-        bot = 0;
+        bot = 2;
         win = "lose"
         scoreB = scoreB + 1;
         console.log("cheater bot scisor")
