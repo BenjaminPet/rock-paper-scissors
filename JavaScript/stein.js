@@ -18,7 +18,7 @@ function rock() {
         bot = 0;
         win = "lose"
         scoreB = scoreB + 1;
-        console.log("cheater bot rock")
+        console.log("cheater bot paper")
 
     } else if (timeLeft = 1){
         // you = rock bot = sisor
@@ -48,7 +48,7 @@ function paper() {
         bot = 0;
         win = "lose"
         scoreB = scoreB + 1;
-        console.log("cheater bot rock")
+        console.log("cheater bot scisor")
 
     } else if (timeLeft = 1){
         // you = papir bot = rock
