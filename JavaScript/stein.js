@@ -67,6 +67,7 @@ function sisor() {
         if(bot == 1){
             var win = "win";
             scoreA = scoreA + 1;
+            console.log("not")
 
         // you = scissor bot = rock
         } else if(bot == 0){
