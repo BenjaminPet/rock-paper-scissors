@@ -69,13 +69,14 @@ table {
 }
 .back {
     background-color: red;
-    margin: 100px;
+    margin: 0 auto;
+    margin-bottom: 100px;
     padding: 35px;
     font-weight: 1000;
     border-radius: 10px;
     box-shadow: 0px 20px 20px rgba(1, 0, 0, 0.507);
     transition: all 0.3s ease 0s;
-    left: 50%;
+    display: flex;
 
 
 }
