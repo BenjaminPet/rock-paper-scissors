@@ -110,6 +110,7 @@ function Retry() {
     document.getElementById("list").style.visibility = "hidden";
     document.getElementById("Retry").style.visibility = "hidden";
     round = round + 1
+    d = true;
 
 }
 
@@ -227,4 +228,5 @@ function result(you, win) {
     }
     var myMusic = new Audio("../470083__sheyvan__music-orchestral-victory-fanfare.wav");
     myMusic.play();
+    
 }
